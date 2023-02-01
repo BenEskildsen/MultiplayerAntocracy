@@ -1,0 +1,51 @@
+{
+  "name": "antocracy",
+  "version": "1.0.0",
+  "main": "js/electron.js",
+  "scripts": {
+    "flow": "flow",
+    "babel": "babel",
+    "browserify": "browserify",
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "beneskildsen",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-proposal-optional-chaining": "^7.20.7",
+    "@babel/plugin-transform-react-jsx": "^7.20.7",
+    "@babel/preset-flow": "^7.0.0",
+    "esmify": "^2.1.1",
+    "flow-bin": "^0.121.0"
+  },
+  "dependencies": {
+    "@babel/preset-flow": "^7.0.0",
+    "axios": "^0.21.4",
+    "babel-preset-es2021": "^1.0.0",
+    "bens_ui_components": "^1.4.83",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pg": "^8.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "redux": "^4.1.2",
+    "socket.io": "^4.5.4",
+    "split": "^1.0.1"
+  },
+  "bin": {
+    "sidewalkempire": "bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": "https://github.com/BenEskildsen/SidewalkEmpire/issues"
+  },
+  "homepage": "https://github.com/BenEskildsen/SidewalkEmpire#readme",
+  "description": ""
+}

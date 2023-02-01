@@ -1,0 +1,37 @@
+<---------- ../TODO
+
+- - - - - - WEBSITE - - - - - -
+  ~/Code/Blog/TODO
+  - How to get custom domain name through heroku?
+    - Need to own the domain name separately through a domain registration service
+    - https://devcenter.heroku.com/articles/custom-domains
+  - cookie permissions
+  - GDPR privacy policy
+  - look into JS minification/obfuscation
+  - robots.txt
+
+- - - - - - INCORPORATION - - - - - -
+  - how others are incorporated
+    - Dodo's Peak
+      - Moving Pieces Inc (New York)
+      - Domestic Business Corporation
+    - Stardew Valley
+      - Concerned Ape LLC (Washington)
+      - "Stardew Valley" is trademarked
+    - Galcon
+      - nothing that I can tell
+    - Super Meat Boy
+      - Team Meat LLC
+    - Braid
+      Number None Inc.
+  - LLC vs S Corp vs C Corp
+    - S is pass-through w/ personal taxes covering business earnings
+
+
+- - - - - - MEDIA LAW - - - - - -
+  - The Gamedev Business Handbook
+  - Licensing for react/redux and other dependencies?
+
+
+- - - - - - MONEY  - - - - - -
+  - indie bundle payment handler

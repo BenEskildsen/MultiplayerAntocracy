@@ -1,0 +1,32 @@
+<---------- ../TODO
+
+- - - - - - ANIMATIONS - - - - - -
+  - laying egg
+  - fighting
+    - stinging
+    - biting
+    - dashing and leaving a series of shadows behind
+  - pupa hatching
+  - larva occasionally requesting food
+  - picking up/putting down should move mandibles but not legs
+  - dying
+
+- - - - - - ASSETS - - - - - - -
+  - dirt
+    - improve un-subdivided dirt look
+  - ants across colors
+  - ants across species
+  - favicons
+  - termites
+    - workers
+    - soldiers
+    - queen
+    - young queen
+  - parallax-able backgrounds
+    - kitchen
+    - more grass/yards
+    - placed in overworld?
+  - things to block off the sides of the grid
+  - spider(s)
+  - beetles
+

@@ -1,0 +1,7 @@
+git checkout electron
+git pull
+git rebase dev
+
+git checkout dev
+
+git status

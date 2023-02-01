@@ -1,0 +1,35 @@
+create table ant_scores (
+	id serial primary key,
+	username varchar(50) not null,
+	map varchar(50) not null,
+	ticks int,
+	queens int,
+	ants int,
+  game_time int,
+	time timestamp with time zone default current_timestamp,
+	species varchar(50)
+);
+
+create table site_visits (
+	hostname varchar(50),
+	path varchar(100),
+	map varchar(100),
+	num_visits int,
+	num_unique_visits int,
+	last_visited timestamp with time zone default current_timestamp,
+	primary key (hostname, path, map)
+);
+
+create table ant_sessions (
+	id serial primary key,
+  	hostname varchar(50),
+  	ending varchar(50),
+  	username varchar(50),
+  	is_unique int,
+  	ants int,
+  	queens int,
+  	play_minutes real,
+  	visited_at timestamp with time zone default current_timestamp,
+  	map varchar(100),
+  	device varchar(50)
+);

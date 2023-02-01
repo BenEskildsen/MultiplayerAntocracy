@@ -1,0 +1,60 @@
+
+const express = require('express');
+const cors = require('cors');
+const urlParser = require('url');
+const {
+  recordVisit,
+  recordSession,
+  checkUsername,
+  getHighScores, writeScore,
+  getDashboardData,
+} = require('./middleware');
+const {initSocketServer} = require('./socket');
+const {gameReducer} = require('./serverGameReducer');
+
+const port = process.env.PORT || 8000;
+
+const leaderboards = express();
+leaderboards.use(cors());
+leaderboards.use(express.json());
+leaderboards.use(express.urlencoded({extended: false}));
+
+leaderboards.get('/highscores', [
+  getHighScores,
+]);
+leaderboards.post('/score', [
+  checkUsername,
+  writeScore,
+]);
+
+const game = express();
+game.use(cors());
+game.use(express.json());
+game.use(express.static('./'));
+game.post('/visit', [
+  recordVisit,
+]);
+game.post('/session', [
+  recordSession,
+]);
+game.get('/dashboard', [
+  getDashboardData,
+]);
+game.use(leaderboards);
+
+let nextSessionID = 1;
+const newSession = (clientID) => {
+  const id = nextSessionID++;
+  return {
+    id,
+    name: "Game #" + id,
+    clients: [clientID],
+
+
+  };
+};
+
+const server = initSocketServer(game, newSession, gameReducer);
+
+console.log("server listening on port", port);
+server.listen(port);

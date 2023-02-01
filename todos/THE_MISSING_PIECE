@@ -1,0 +1,223 @@
+<------ ../TODO
+
+- - - - - - RICHNESS OF SIMULATION - - - - - -
+  - 4 strategies for getting more ants:
+    - the strats:
+      - killing critters
+        - do critters need to reproduce?
+      - mutualism with critters
+      - stealing from humans
+      - stealing food/pupa from other ants
+        - this is not really possible because your alerted ants will never pick up pupa
+          and take it away successfully
+          - could just carve out an exception for holding pupa
+      - role of digging? potential 5th strat which is just to dig more
+    - how to give you tools to do this that can be (re)combined in interesting ways
+      rather than just "this ant is good at killing spiders"
+    - how to make them mutually exclusive in some sense so that you can't
+      just seamlessly switch between those strategies depending on wherever your queen is
+    - these don't mesh too well with the current goal of killing the enemy queen
+      - killing enemy queen would need to be way more difficult both at the
+        level of the queen's stats AND at the level of organization of the enemy colony
+
+  - ant coordination and cooperation
+    - make GRAPPLE more complex and applicable to all entities you fight
+    - grappling onto legs to prevent movement of enemies ^^
+    - working together to carry larger items a la pikmin
+    - chains/bridges of ants (or rafts on water?)
+
+  - thriving ecosystem independent of player ants
+    - life cycles for other critters
+    - day night cycle
+      - could add FoW where only queen can see
+      - critters need different behavior day vs night
+    - rain/weather
+    - plants (how?)
+
+  - random feature ideas
+    - water
+    - more bugs: praying mantis, dung beetle, roly poly, snails, silverfish
+    - birds
+    - mutualisms like growing plants, aphids w/honeydew
+
+
+- - - - - - DRIVER OF ENGAGEMENT - - - - - -
+  - the goal of the game IS to get a lot of ants
+    - getting more ants should be interesting and fun
+    - having more ants should make more stuff possible (in a continuous way
+    - while you have fewer ants it should be clear that more cool stuff would be
+      possible if you had more ants
+
+  - queen could die of old age, so you must reproduce before this
+    - 10 minute worker life == 200 ant capacity, then 20 minute queen life is reasonable
+    - between generations, pick new young queens with upgrades
+    - and pick new general starting location either in a different level or within this level
+    - huge world (400x400, 500x500, 1000x1000?) that takes generations to explore
+  - what if you have to assemble something using found items? (eg rocket)
+    - could be complicated in the huge world AND impossible w/multiple levels
+
+  - ants vs termites (vs bees vs wasps)
+    - start you off by letting you select a randomized young queen
+      and then picking a general start location from a zoomed out view
+    - 1 queen of each type in 400x400 world
+    - each with different qualitative attributes for fighting against
+      - termites
+        - produce their own food
+        - soldiers shoot acid in front of them
+        - deep underground
+      - bees
+        - flight
+        - sting to insta-kill, but then die
+        - go to flowers
+        - 2x2 (queen 2x3)
+      - wasps
+        - flight
+        - 2x4 (queen 3x6)
+        - sting frequently, but smaller numbers than bees
+      - ants
+        - mirror abilities available to you somehow?
+    - spend generations building up upgrades to be competitive with what they start with
+    - other interesting stuff in the ecosystem to interact with
+
+
+- - - - - - MODEL - - - - - - -
+  - Goal:
+    - get 250 ants w/6-7 upgrades
+      - leaderboard for time taken to get 250 ants per map
+    - get as many young queens as you can for 5-10 minutes
+      - leaderboard for num alive at the end
+    - keep playing, get as many young queens/ants as you can
+      - leaderboard for most alive ants, most alive young queens per map
+  - Features:
+    - cards w/descriptions for upgrades, in a system that prompts them
+    - updated ability bar and hotkeys
+    - additional upgrades (for ~12 total abilities)
+      - dash, alert, super major, warrior queen
+      - young queen, follow, rally, mega colony
+      - burrow, dig, major, domesticate
+    - leaderboards on start menu (personal leaderboards too)
+    - leaderboard infra
+    - more stuff to do in world
+      * aphids, dung beetles, centipedes, caterpillars
+      - feet walking, bird
+      - water, vines, flower, fungus
+    - music, sounds
+    * maps
+    * (auto?)save the game in localStorage
+
+
+- - - - - - - - FEATURES - - - - - -
+  - critters
+    - beetle
+      - give it interesting behavior of any kind
+      - have it lay eggs
+      - separate from dung beetle?
+    - spider
+      - start spider smaller and have it grow as it eats?
+      - to draw:
+        - spider
+        - move
+        - attack
+        - being attacked
+    - worm
+      - have rear (and all, if w/sprites) segments interpolate
+    - aphids
+      - food producing behavior
+      - moves like beetle
+      - charges up on vines
+      - uses charge to lay food randomly
+    - dung beetles
+      - dirt producing behavior
+    - centipede
+      - to draw:
+    - butterfly
+      - eggs/caterpillars/cocoon/butterfly
+      - caterpillars:
+        - segmented entities
+        - eat vines
+        - at maxSegments turn into cocoon
+    - bird
+    - foot
+
+  - doodads
+    - bird skeleton
+
+  - termites
+    - should be some reward for fighting them
+      - the fungus? have them turn to food? only turn to food after queen is dead?
+    - soldier shoots acid
+    - fungus production
+    - cap termite colony size
+  - bees
+    - worker, queen
+      - flight
+      - sting animation
+    - honeycomb
+      - egg, larva, pupa inside
+      - honey?
+  - wasps
+    - worker, queen
+      - sting
+      - flight
+    - nest
+  - ants
+    - allow ants to be passive around certain entities, but attack if alerted by queen
+      - vines, aphids,
+    - media notes
+      - media are bad at bringing back food, get stuck on each other and move slow
+      - media are difficult to recruit/keep recruited to a fight
+      - media can have trouble putting stuff down (blocked diagonally somehow?)
+      - media should be more expensive, faster, and better fighters (more hp/damage)
+        - shock troops
+        - could get an upgrade to allow them to pick up dirt?
+    - DASH attack:
+      - the micro can seemingly snag on the target when trying to turn away
+    - to draw:
+
+  - ant capabilities
+    - working together to pick up larger objects
+    - piling on top of each other to bridge water or other divides
+
+  - environment
+    - water
+      - experiment with opacity gradient for background to make it look like a slope
+    - plants
+      - vines
+        - to draw:
+        - leaves:
+          - leaves need to figure out their neighbor/orientation
+          - should not be blocking -- so separate entity type?
+      - flowers
+        - sprout from vines?
+        - non-blocking?
+      - fungus
+        - similar to vine, sprouts smaller amounts of food more frequently?
+        - taking away the food helps it grow more
+      - fire
+        - started by:
+          - matches, lightning, frayed wire doodad
+          - spreads on vines
+          - chars dirt/stone
+        - could be a pheromone
+        - if it spreads too fast, it just destroys everything and burns out
+        - if it spreads too slow, it might be unrealistc?
+        - how could you sculpt the spread to do stuff w/o being OP?
+
+
+  - behavior/difficulty tuning
+    - enemy entities attacking at intervals/when you hit ant milestones
+
+  - juiciness of movement
+    - ants' heads should turn as they turn
+    - experiment with using examine sprites during MOVE_TURNS and/or during retrieval task
+    - ants shouldn't turn around as much, should favor things w/in move_turn theta
+    - ants should do the antennae-thing when they meet up face to face
+
+  - performance
+    - incremental pheromone spread
+    - png-ifying only part of the world at a time
+    - slowing down entities that are further away?
+
+  - local storage
+    - tutorials/modals
+    - saving the game

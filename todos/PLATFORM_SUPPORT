@@ -1,0 +1,44 @@
+<------- ../TODO
+
+
+- - - - - - - MOBILE/X-BROWSER SUPPORT - - - - - -
+  - Native support
+    - MVP
+      - canvas
+      - document
+    - Make Main file as small as possible
+    - Make Game file as small as possible
+    - Text tags everywhere?
+    - native button, dropdown, checkbox, etc. components?
+    - add isNative prop to Main and/or state
+    - automate build pipeline between the two projects (w/o overwriting certain files)
+    - issues:
+      - Control buttons don't update (e.g. show eggs to lay)
+      - work through getting react running on the phone
+
+  - desktop
+    - selecting screen by accident on chrome
+    - ev.keycode probably doesn't work on mozilla
+
+  - mobile
+    - joystick controls
+      - better indicator that this is actually a joystick
+      - fix pinch zoom issues
+      - the stick itself should be bigger
+      - joystick needs bigger margin around facing non-diagonally
+      - joystick size should scale based on screen size
+    - tapping a button while using joystick is a pinch zoom (except on chrome)
+    - safari and chrome (and maybe firefox) have issues not letting up after pressing
+      e.g. bite or follow
+    - probably just need to re-think how to hold bite/follow
+    - safari:
+      - after phone is turned sideways, dragging joystick makes URL bar
+        re-appear and then allows vertical scrolling
+        - can try switching from width, height: 100% to 100vh
+    - chrome:
+      - can sometimes get in situation where you won't stop biting
+      - can still occassionally zoom in, particularly when tapping near text, then
+        won't zoom out
+      - somehow has no pinch zoom problems
+    - firefox:
+      - double tapping near buttons zooms in

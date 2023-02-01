@@ -1,0 +1,24 @@
+<------ ../TODO
+
+- - - - - - REAL MULTIPLAYER - - - - - -
+  - lobby
+    - can be an express app with a totally different route
+    - then give some sort of token in the URI when joining a game
+  - server model
+    - tickreducer lives on the server
+      - audit for Math.random()'s that happen outside of tick reducer code path
+      - how to send state update to players then?
+    - make game deterministic, server fires TICK action to both players
+      - only need to send queen actions back and forth
+      - this would be challenging with pheromones emitted by the queen
+    - all queen actions would need a round trip, else recomputing state is a huge challenge
+      - with the exception of plain moves?
+  - heroku vs aws
+
+
+- - - - - - SPLITSCREEN - - - - - -
+  - audit every playerID == game.playerID location
+  - queen-based functions need to take in a playerID
+  - render function needs to take in a playerID
+  - two canvases side by side?
+  - can it actually just simulate a server and two clients?

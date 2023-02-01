@@ -1,0 +1,9 @@
+
+# make for current OS
+# NOTE: make sure to update this inside of the ./make script
+# change .ico to .icns
+npm run make
+
+# make for windows
+# NOTE: make sure to update this inside of the ./make script
+npm run make -- -p win32

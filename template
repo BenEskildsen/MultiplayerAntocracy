@@ -1,0 +1,69 @@
+#!/bin/bash
+# Copy the entire directoy this file is in as the base for your game.
+# Then run to get all these node files
+# Comment out things you don't need
+
+# NOTE that if the package.json has all the depencies with the proper versions
+# that just running npm install will do them instead of needing this
+
+# npm init
+
+# flow
+sudo npm install --save-dev flow-bin
+
+# browserify
+sudo npm install -g browserify
+
+# babel
+# NOTE: babel now uses @babel/ not babel- so probably remove those
+# sudo npm install babel-preset-flow
+# sudo npm install babel-preset-es2015
+# sudo npm install babel-cli babel-core --save-dev
+sudo npm install --save-dev @babel/core
+# sudo npm install --save-dev babel-plugin-transform-react-jsx
+# sudo npm i babel-core babel-plugin-transform-react-jsx babel-preset-env --save-dev
+sudo npm install --save-dev babel-plugin-transform-object-rest-spread
+sudo npm install --save-dev @babel/plugin-proposal-optional-chaining
+
+# react
+sudo npm install --save react react-dom
+# sudo npm install react-tween-state
+
+# redux
+sudo npm install --save redux
+
+# make canvas art look like sketches
+# npm install --save roughjs
+
+# d3
+# sudo npm install d3
+# npm install topojson-client
+
+# eureca
+# sudo npm install eureca.io
+# sudo npm install wrtc
+# sudo npm install engine.io
+
+#eureca
+npm install express --save
+
+# cross-origin
+npm install cors
+
+# react native server
+npm install -g expo-cli
+
+# postgres
+npm install pg
+
+# clientside REST
+npm install axios
+
+# electron
+npm i -D electron@latest
+
+# electron forge
+npm i -g @electron-forge/cli
+
+# electron squirrel
+npm i @electron-forge/maker-squirrel

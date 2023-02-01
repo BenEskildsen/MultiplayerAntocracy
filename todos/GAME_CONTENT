@@ -1,0 +1,79 @@
+<----------- ../TODO
+
+
+- - - - - HANDLING - - - - -
+  - joystick
+  - enemy queen dying off screen feels really bad
+    - should zoom out or move camera over it in slow motion
+
+
+- - - - - AMBIANCE - - - - -
+  - tiles/spritesheets
+    - merge tilesheets into one
+    - load sprites into state on game start, copy to game
+  - workers
+  - doodads
+  - critters
+  - backgrounds
+    - support backgrounds in non-square worlds
+  - sound/music
+
+
+- - - - - SELF-ORGANIZATION - - - - -
+  - tokens
+    - have ants stack things around tokens
+      - ants can get cut off from putdown locations
+      - can't go up to e.g. food token once there's food there
+        - could instead use food/dirt in the tokenradius
+        - (could also render pheromone if queen is facing marked dirt)
+  - tasks
+    - can there be an ants-exchanging-info interaction?
+  - tuning simulation notes
+    - main issues
+      - no overall control/balance between tasks -- too reliant on where ants happen to be
+      - need to solve 2 problems: how many ants? And where?
+    - track task demand
+      - add thresholds to config
+    - tasks:
+      - explore
+        - exploring ants can get stuck going down in the colony instead of out
+      - retrieve
+      - return
+        - can end up in a traffic jam with food blocking off where they need to go
+      - feed larva
+        - what to do with ants doing this task once larva are fed?
+          - if food need <= 0, switch task to return?
+      - move eggs/larva/pupa
+        - ants don't recruit to these tasks readily
+
+
+- - - - - COMBAT - - - - -
+  - queen
+    - blinking animation when taking damage
+    - queen should emit alert pheromone when attacked (hard to press and bite on phone)
+      - as an upgrade?
+    - better indication when the queen is hitting target
+  - workers
+  - spiders
+    - spider gets hungry, starts following pheromone, eats ants, goes away
+    - spiderweb
+  - colony vs colony
+    - cpu ants attacking occasionally
+      - get them to retreat after a certain time or amount of losses?
+      - have percent of ants that attack (that goes up each time?)
+    - cpu queen dash attack?
+
+
+- - - - - STRATEGY - - - - -
+  - young queens
+    - should they be fighters? Upgrade for this?
+    - need animations for bite/pickup/putdown
+  - queen attention/direction
+    - tune how ants react to queen pheromone
+    - pheromone for sending ants out ahead
+  - overworld
+  - cpu ant colonies
+    - also should be able to dig from time to time
+      - for regular chambers, mark dirt in level editor that is dug out later
+      - for attacks, have a separate pheromone that passes through dirt which they
+        can use to decide where to dig

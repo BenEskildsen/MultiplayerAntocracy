@@ -1,0 +1,91 @@
+<------ ../TODO
+
+
+- - - - - - BIG WORLD - - - - - -
+  - opening story that shows you as an egg, then larva, then pupa that
+    demonstrates how the ant lifecycle works and your place in ant history
+  - "then everything changed when the Fire Ants attacked"
+  - enemy attacks that ramp up their numbers over time
+  - spiders w/webs, beetles will only fight back, never initiate a fight
+  - termite colony that is mostly passive, workers don't fight at all
+  - don't need to kill everything
+  - humans that generally don't bother, but also can't really be defeated
+  - alternatives to num young queens for upgrade currency
+    - queens fly away immediately
+    - queens fly away after eating or going to a token or something
+    - queens have the upgrade as a property on them, you choose which queen to play as next
+    - bigger world with young queen being chosen as new queen, old colony becomes
+      an ally (argentinean, it would stay as part of your colony)
+    - morph into young queen on site
+
+
+- - - - - MAIN THINGS TO BRAINSTORM - - - - -
+  - How to fit io model best?
+    - improve main menu
+      - Needs:
+        - title
+        - continue, import, new game
+        - steam upsell
+        - about this game (gear)
+        - links to source, community, change log
+        - blurred background of game stuff going on
+    - reduce friction when starting game
+    - refactor frontend to use routes
+      - can each level be its own html file?
+  - Name:
+    - Mothership: Ant
+    - General Smant: Army Ant
+    - Queen Smant:
+    - Suburban Crawl
+    - Pest Control
+    - Sisterhood of the Travelling Ants
+  - How to do upgrades/young queens?
+    - timer where young queens periodically fly away, giving upgrades?
+
+
+- - - - - - BIG PICTURE MUSING - - - - - -
+  - opportunities for procedural generation
+    - have fixed environments, but randomize which enemies you encounter there?
+    - randomize queen start location?
+  - additional enemies
+    - critter that lays food continuously?
+    - weak critter that moves too fast for queen to catch?
+    - worms, centipedes, caterpillars(?)
+    - praying mantis
+  - ant species to consider and their tech choices
+    - leafcutters
+      - econ: many small, weak ants
+      - fighting: variety of larger castes
+    - jumping ants
+      - tank: more hp for queen, aggro
+      - assassin: more damage, dashing, stealth
+    - army ants
+      - no tokens, can only pick up and putdown (either on alert, or when thing is ready
+        to hatch, perhaps they take larva to food instead of vice versa)
+      - always following queen
+      - faster vs stronger colony
+    - some sort of aphid-farming ant
+    - colony/tech based on complex dirt structures/chambers
+    - honeypot ants
+
+
+- - - - - - LATER - - - - - -
+  - improve pheromone decision function for entities >1x1
+    - average the values of possible new footprints vs avg values of current footprint
+    - can bring back 1x2 young queens?
+    - can bring back media only jumping ants?
+  - humans
+    - poison food
+      - property of food, like isPoisoned: true
+      - symbol on the food (that maybe displays later?)
+      - show effect of poison on the fed larva
+      - what kind of level would this be on?
+    - foot
+      - action for ants crawling up
+  - pheromone suppression ability
+    - should render something to indicate you're using it
+  - termites
+    - mechanism for feeding queen, then it laying an egg
+    - need token that produces food
+      - tokens are only differentiated by pheromone type
+        Need another way to define custom behavior for them

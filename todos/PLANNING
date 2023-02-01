@@ -1,0 +1,49 @@
+<------  ../TODO
+
+ - - - - - - CONTENT - - - - - -
+ - species
+    - ant vs termite
+    - different species of ant
+      - generalist (Argentinean), start with some workers
+      - eco-heavy (Leafcutters), many castes
+      - warrior-queen (Indian jumping ant), workers can lay eggs too
+      - stealth?
+      - ant species could be defined entirely via base upgrades
+    - non-social bugs (spiders)
+    - humans (poison, feet)
+ - tech tree progression
+
+
+ - - - - - FEATURES - - - - - -
+ - over-world
+    - tracking progress in over-world
+ - game over detection and continuation
+ - sound
+    - sound effects
+    - music
+ - queen features
+    - dash/ dash attack
+    - sting attack
+    - should queen have energy (mana) recharged by eating food?
+    - perhaps limited slots for actions that you can swap in/out periodically?
+    - marking dirt to dig out
+      - want to widen colony entrance
+      - want to fine-tune how big of a chamber, how long of a tunnel
+ - big entities with rotation, collision
+    - queen laying eggs that it doesn't collide with
+    - big entities picking up from in front of them
+    - onScreen detection for big entities needs to know about their size
+
+
+ - - - - - INFRA - - - - - -
+ - multiplayer
+    - client/server
+      - concept of players
+      - concept of gameIDs and game instances
+      - server tracking multiple games
+    - try out AWS/Elastic Beanstalk
+ - level editor
+ - level storage/loading
+ - thunk + reducer for all simulation changes
+ - proper canvas size responsivenes
+ - spritesheet organization

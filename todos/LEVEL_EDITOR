@@ -1,0 +1,73 @@
+<------ ../TODO
+
+
+- - - - - - - - BUGS - - - - -
+  - armored queen upgrade breaks reset
+  - getting X ants on the same tick doesn't allow for getting the right number of upgrades
+  - pheromone visibility doesn't survive reset
+  - can place big entities s.t. they collide with other entities
+    - need to check every position of the entity
+    - some entities you should be able to stack
+      - background, spider web, dead_
+
+
+- - - - - LEVEL EDITOR - - - - - -
+  - allow closing of left or right sidebars to increase screen size
+
+
+- - - - - - FOOT MODE - - - - -
+  - re-configure click handlers
+  - render feet at full size
+  - render small 1x1 foot when not in foot mode
+  - palette UI:
+    - mode is selectable to swap out entity palette (same for copy paste)
+    - click to place foot starting position(s) (last two clicks)
+    - marquee to add to area where foot will come down
+    - configure timing
+      - how often it walks across
+      - speed of walking during one step
+  - foot stomp area
+    - initialize this area to be the footprints themselves
+    - render this area when in foot mode
+    - ability to add/remove from the foot stomp area
+    - I guess define the direction of walking
+    - what would it mean to have non-rectangular area?
+      - perhaps always rectangular areas/paths with different probabilities
+        of taking them, and with direction associated.
+      - perhaps a walking path is the unit you work with, and it is two foot entities wide
+  - update foot operations so they land within foot zones
+    - entire foot stays inside boundaries
+    - picking a direction to walk
+  - all this stuff lives on the foot
+    - how to distinguish/coordinate between the two feet? master-slave?
+
+
+- - - - - - COPY PASTE - - - - - -
+  - undo/redo hides the copy marquee
+  - want a way to copy-paste an entire world across tabs
+    - export as series of actions
+    - import into the clipboard
+    - click to rerun those actions but with an offset
+
+
+- - - - - - RECORDING - - - - - -
+  - recording:
+    - UI for this
+      - start/stop button
+      - reset button
+      - how to initiate playback? Only at start of game?
+      - which actions to record:
+        - SET_KEY_PRESS
+        - ANT_BITE
+        - START_EGG_LAYING
+        - SET_PHEROMONE_ACTIVE
+        - SET_SELECTED_PHEROMONE
+        - SET_LAYING_CASTE
+        - ENQUEUE_ENTITY_ACTION
+        - MARK_DIRT
+      - is it OK for other entities to just do whatever?
+  - playback:
+    - highlight buttons that were pressed
+    - have the joystick move
+    - ignore user actions (at the UI/keyboard listener level?)
+

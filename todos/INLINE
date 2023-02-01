@@ -1,0 +1,31 @@
+<----- ../TODO
+
+js/ui/Game.react.js:  // TODO: move pheromone controls to queen thunks
+js/ui/Components/Slider.react.js:  // TODO slider originalValue should come from globalconfig
+js/ui/Components/NumberField.react.js: * submitOnEnter: boolean, // TODO: not implemented
+js/ui/Components/AudioWidget.react.js:      // TODO: shuffle the playOrder array
+js/thunks/queenThunks.js:    const entityAction = makeAction(game, queen, 'DASH', {nextPos}); // TODO: frame offset
+js/simulation/critterOperations.js:// TODO: decide how to make antFeedNeighbor more generalized
+js/simulation/entityOperations.js:    // TODO: do I need to do this filter? NOTE that having it breaks critter pheromone
+js/simulation/antOperations.js:  // TODO: remove hardcoded task need
+js/simulation/antOperations.js:  // TODO: handling "improper" task transitions like this is not scaleable
+js/simulation/antOperations.js:    playerID = game.playerID; // TODO: player can't use ATTACK task as intended
+js/simulation/antOperations.js:      // TODO: don't hardcode explore values
+js/simulation/antOperations.js:// TODO: HACK: termiteDecideTask shouldn't be in this file!
+js/utils/gridHelpers.js:  initGrid, // TODO: move gridHelpers out of utils/
+js/utils/pheromoneWorker.js: * TODO: How to handle dispersing pheromones like water?
+js/utils/pheromoneWorker.js: * TODO: Make sure that if another message is posted before finishing computing
+js/utils/pheromoneWorker.js: * TODO: Anything else that sets pheromone needs to stay in sync with the worker
+js/utils/pheromoneWorker.js:          // TODO: bring this back when water shouldn't decay
+js/utils/pheromoneWorker.js:      // TODO: bring this back when water shouldn't decay
+js/config.js:  // TODO this is unnecessary, all pheromones are steady state pheromones
+js/config.js:  // TODO: use or not use cpu media/major thresholds
+js/config.js:  // TODO: pickupTypes should just live on the caste
+js/state/makeConfig.js:    // TODO: don't have pheromoneBlockingTypes on player config also
+js/systems/spriteSheetSystem.js:  // TODO: don't load sprites if they're already loaded
+js/reducers/serverTickReducer.js:    // TODO: PHER
+js/reducers/serverTickReducer.js:  // TODO: PHER
+js/reducers/serverTickReducer.js:  // TODO: PHER
+js/selectors/tokens.js:    // TODO: it seems like this never happens
+js/selectors/misc.js:  // TODO: this is a hack to let media and majors move around more easily
+js/selectors/pheromones.js:  //   const playerID = game.playerID; // TODO: HACK: critters don't have a playerID, use player's

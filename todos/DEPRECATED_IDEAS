@@ -1,0 +1,31 @@
+<---- ../TODO
+
+
+- - - - CAMPAIGN-RELATED - - - -
+  - defense level is too hard
+  - zoom out on winning level is still jarring
+  - on upgrade/select level screen show campaign-wide ants created/lost/killed
+  - upgrade tree
+    - name -> description, name should be more biological-sounding
+    - upgrade costs should be settable per species
+    - things like bigger queen are a suite of upgrades that should display as only 1
+    - upgrades:
+      - workers that lay eggs
+        - config list of castes allowed to lay eggs
+        - put eggLayingCooldown on the caste (update upgrades!)
+      - picking up > 1x1
+        - option 1: array of holding
+        - option 2: make things like food be NxN and have minima subdivide them
+        - option 3: merge newly picked up entity with already-held entity
+      - pheromone types:
+        - disperse ants
+        - suppress pheromones
+      - multiple queens
+      - upgrade to allow your ants to send out alert pheromone when attacked
+      - tokens as upgrades?
+      - food-producing token
+        - different type of food entity that is the output
+        - leafcutter minima should be even weaker
+      - bomb token
+      - mind control token
+      - alert only affects media or larger

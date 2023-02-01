@@ -1,0 +1,41 @@
+<------- ../TODO
+
+- - - - - - - ENTITY CREATION - - - - - -
+  - add to config and relevant config lists
+    + dead types
+    + blockers on all the other entities
+  - add makeFn
+  - link up makeFn in gameReducer
+  - add args and configuration in level editor
+  - add renderFN in renderOthers
+  - link to renderFN in render/render
+  - if critter, add to switch in updateCritterLifecycle in tickReducer
+
+- - - - - - - QUEEN ABILITY - - - - - - -
+  - add to queen Pheromones
+  - if pheromone:
+    - add to pheromone configs
+    - add to antDecideMove function for this pheromone
+    - set its visibility in state/gameState
+    - add to getPheromoneSources to support emitting pheromone while queen moves
+    - add to queen stuff in tickReducer
+  - add ability name to the AbilityControls
+
+- - - - - - - - LEVEL DESIGN - - - - - - -
+  - 2-4 food readily available
+  - 6-8 food available that encourages digging in a fruitful direction and gets first upgrade
+  - 1 beetle nearby that is not mandatory to fight before 20 ants
+  - 2ish beetles that block shortest path to more fruitful area
+  - mostly enclosed, but with wide open area further away where clashes with red ants occur
+  - enable fighting, digging, and farming strategies
+  - food concentrated where ants will patrol at allows them to collect that food better
+  - hose should be able to run off the world
+  - macro-scale view of level is some recognizable area (e.g. kitchen, picnic)
+  - adding a new level:
+    - save export in levels, reference in levels/levels
+    - screenshot minimap and add to /img/
+    - reference in mapCards in ui/Lobby
+
+- - - - - - - DEMO VIDEOS - - - - - - -
+  - comment out updateViewPos setting
+  - comment out renderMinimap

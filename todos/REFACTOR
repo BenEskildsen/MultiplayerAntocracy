@@ -1,0 +1,48 @@
+<------ ../TODO
+
+
+- - - - - - - HI PRI - - - - - -
+  - pheromone spread
+    - use getPheromoneAtPosition everywhere
+    - put pheromone refresh rate on config (e.g. % 32 in tickReducer)
+    - animate steadystate pheromones using sinusoid to select sprite?
+    - don't store COLONY: 0, etc. on every single grid cell
+    - could use this to pre-store pheromone direction
+  - stacking an action MUST be paired with critterStartCurrentAction which is
+    a big gotcha
+  - NxM entities don't render well with how I'm doing rotations, see renderTermite
+  - could be nice to encapsulate entities in a single file
+  - transitions between tasks is spaghetti
+    - could have a conditional tracking done-ness, then transition function
+    - antDecideTask and antDecideAction split ant decision-making
+    - antDecideTask depends almost entirely on what you're holding, except:
+      - putdown dirt switches to return
+      - return to colony when holding nothing switches to wander (for putdown dirt to work)
+  - way to execute action at the END of the animation instead of the start
+    - problem with effect index is stacking e.g. TURN won't check if this is needed until
+      the effectIndex
+
+
+- - - - - - - LOW PRI - - - - - -
+  - critter, ant, termite, should be consolidated into insect- functions
+    (that switch off of family, species, caste?)
+  - get types file back up to date
+  - config
+    - add Config type to types.js
+    - does canvasWidth/Height need to be on global config?
+      - config in mouseSystem
+  - multiplayer
+    - split game into serverProxy (will stay as game)
+    - fix all callsites of game that use client-only state
+  - critters having their own pheromone would need to go across playerIDs
+  - refactor blocking types to live on the caste like actions do
+    - media shouldn't be blocked by minima, cleanly
+  - need to refactor s.t. payloads on actions are always objects -- since if payload is
+    e.g. the queen, then she has frameOffset and can mess up the rendering
+  - ant diagonal movement
+    - seems to not matter:
+      - pheromone sprites may need to restrict to 90 deg
+      - getting entity positions based on dir alignment in gridHelpers
+        - either doesn't matter, or only for MxN
+      - insert/remove from grid in entityOperations
+      - ants can pass through diagonal gaps

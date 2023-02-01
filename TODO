@@ -1,0 +1,168 @@
+-------> ./todos/ART
+-------> ./todos/THE_MISSING_PIECE
+-------> ./todos/BUSINESS
+-------> ./todos/FEATURE_IDEAS
+
+-------> ./todos/CHECKLISTS
+-------> ./todos/INLINE
+-------> ./todos/REFACTOR
+-------> ./todos/LEVEL_EDITOR
+-------> ./todos/PLATFORM_SUPPORT
+-------> ./todos/MULTIPLAYER
+
+-------> ~/Code/Blog/TODO
+-------> ./todos/DEPRECATED_IDEAS
+-------> ./todos/GAME_DESIGN_DOC
+-------> ./todos/GAME_CONTENT
+
+
+- - - - - - - 2023 - - - - - - -
+  - multiplayer
+    - debugging
+      - clients get ahead of server and seem to drift over time
+      - if attack (like dash) has no target, not id
+    - sessions
+      - show other players who've joined, allow map selection
+      - don't show play button until players are joined
+      - do game readiness handshake and automatically start games
+      - vs, coop (simply pick which side you're on)
+      - game win condition
+    - multiplayer maps (1v1, 1v1v1)
+    - remove ways to pause (tutorials, upgrade modal, pause)
+    - run game on server
+      - pheromone worker
+        - remove water
+      - critter/ant deaths
+      - make it deterministic
+        - particularly for grapple
+    - rollback netcode
+      - queue actions that come in on a later tick
+      - insta-play actions that took place on an earlier tick
+        - how to rollback and redo actions of npcs?
+      - pheromone worker
+        - need to run pheromone worker on the server?
+        - need to make synchronous so it happens on the same tick?
+
+
+
+- - - - - - REFACTOR - - - - - -
+
+
+- - - - - - ELECTRON - - - - - - -
+  - on dev branch:
+    - change Play button to Free Play
+    - add Campaign button that links to app download
+
+
+- - - - - - TO TEST - - - - - -
+
+
+- - - - - - ISSUES - - - - - -
+
+
+- - - - - - TODO - - - - - -
+  - additional level/background type
+    - sidewalk/driveway
+    - carpet/rug
+  - food collection traffic jams
+    - when food is collected faster than it is fed, it can create bubbles, then not expand
+    - perhaps grow radius when your ants are stuck?
+
+
+- - - - - - - TO THINK ABOUT - - - - - - -
+  - can I work in ant factoids anywhere?
+    - lifecycle like butterflies
+    - haplodiploid
+    - percent of individuals as reproductives
+    - Argentinean super colony
+    - percent of ants not doing anything in particular
+    - ants deciding which task to do
+
+
+- - - - - MISC ISSUES - - - - -
+  - fighting termites is annoying because food gets everywhere
+  - termite queen is rotated weirdly
+  - termites should just not pick up food since they never put it down
+  - ants easily confused if you bring food opposite to the direct path
+
+
+- - - - - - - BUGS - - - - - -
+  - buried doodads don't play nicely visually with moving dirt around
+    - need to be able to redraw just part of the image when refreshing
+      stale areas due to dirt pickup
+      (or also refresh all other unanimated entity types in collision with it)
+  - laying eggs diagonally looks weird, should only pick closest space
+
+
+- - - - - - - WON'T FIX - - - - - - -
+  - vines near the edge of the world can bug out
+  - queen facing diagonally up can fail to pick stuff up if you're holding W and D
+    - appears correlated with the D key
+  - moving the mouse/re-rendering when zoomed out is terrible
+  - big canvas
+    - minimap:
+      - image saving strategy for minimap
+    - smaller canvas over all that is re-computed as you move around
+    - aliasing when refreshing stale positions
+  - segmented:
+    - tail segment ends up at 0,0 when it is first added
+    - for interpolated movement, need to detect opposite angles to reverse frames
+  - fix NxM entities
+    - fix getPositionsInFront for NxM entities (always use height!)
+    - fix jerkiness when you turn to face left or right
+      - rotating about upper left square is the issue
+  - critters frequently stuck on dirt when they're born, then lay egg where they are
+    causing stack of stuck critters
+  - use local storage to dismiss modals forever
+
+
+- - - - - - - CASTES - - - - - -
+  - majors:
+    - media get messed up easily when picking stuff up and trying to return it
+    - have trouble putting stuff down diagonally often
+    - can get stuck wanting to go through 1-wide areas
+
+
+- - - - - LIFECYCLES FOR CRITTERS - - - - - -
+  - aphid:
+    - lays food, not blocked by food
+
+
+- - - - - - - ART - - - - - - -
+  - ants
+    - egg laying animation
+    - different queen model
+  - aphid
+
+
+- - - - - PERFORMANCE - - - - -
+
+
+- - - - - - - WATER - - - - - - -
+
+
+- - - - - - - MODALS - - - - - -
+
+
+- - - - - - QUEEN ABILITIES - - - - - - -
+
+
+- - - - - - - SEGMENTED CRITTERS - - - - - - -
+
+
+- - - - - - IN-GAME CONTROLS - - - - - -
+
+
+- - - - - - - LANDING PAGE - - - - - -
+
+
+- - - - - - - LEADERBOARDS - - - - - - -
+
+
+- - - - - - - SPIDER - - - - - - -
+
+
+- - - - - - - - - VINES - - - - - - -
+
+
+- - - - - FOOT - - - - - -
